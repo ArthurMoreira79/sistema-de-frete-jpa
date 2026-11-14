@@ -34,5 +34,13 @@
 hs_err_pid*
 replay_pid*
 
-# Ignorar o persistence com as senhas reais
-src/main/resources/META-INF/persistence.xml
+# Build do Maven
+target/
+
+# Credenciais locais (use o .env.example como modelo)
+.env
+!.env.example
+
+# Arquivos da IDE (IntelliJ)
+.idea/
+*.iml

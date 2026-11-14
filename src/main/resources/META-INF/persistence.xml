@@ -3,13 +3,15 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
+    <!--
+        As credenciais do banco (URL, usuário e senha) NÃO ficam aqui.
+        Elas são lidas do arquivo .env (ou de variáveis de ambiente) pela classe
+        com.transportadora.util.JPAUtil. Veja o .env.example.
+    -->
     <persistence-unit name="db_frete_transportadora" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_frete_transportadora?createDatabaseIfNotExist=true"/>
-            <property name="jakarta.persistence.jdbc.user" value="SEU_USER_AQUI"/>
-            <property name="jakarta.persistence.jdbc.password" value="SUA_SENHA_AQUI"/>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
